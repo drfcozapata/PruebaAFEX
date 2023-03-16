@@ -1,18 +1,23 @@
 <template>
 	<div class="miniature-grid">
-		<div class="miniature image1">
+		<div class="miniature">
+			<img src="https://i.ytimg.com/vi/AwkeHZhtL7Q/mqdefault.jpg" alt="" />
 			<button class="delete-btn">X</button>
 		</div>
-		<div class="miniature image2">
+		<div class="miniature">
+			<img src="https://i.ytimg.com/vi/8YqoQRsmGhA/mqdefault.jpg" alt="" />
 			<button class="delete-btn">X</button>
 		</div>
-		<div class="miniature image3">
+		<div class="miniature">
+			<img src="https://i.ytimg.com/vi/lek-vQTFe-c/mqdefault.jpg" alt="" />
 			<button class="delete-btn">X</button>
 		</div>
-		<div class="miniature image4">
+		<div class="miniature">
+			<img src="https://i.ytimg.com/vi/SmTOu9G7tbw/mqdefault.jpg" alt="" />
 			<button class="delete-btn">X</button>
 		</div>
-		<div class="miniature image5">
+		<div class="miniature">
+			<img src="https://i.ytimg.com/vi/W8WrBOkAwyM/mqdefault.jpg" alt="" />
 			<button class="delete-btn">X</button>
 		</div>
 	</div>
@@ -34,6 +39,11 @@
 		position: relative;
 		border: solid 0.5px #cccccc;
 
+		img {
+			width: 263px;
+			height: 150px;
+		}
+
 		.delete-btn {
 			position: absolute;
 			top: 9px;
@@ -44,13 +54,6 @@
 			color: #ffffff;
 			z-index: 2;
 		}
-
-		// .image1 {
-		// 	background-image: url('../../public/imagen1.jpg');
-		// 	background-size: contain;
-		// 	background-repeat: no-repeat;
-		// 	background-position: center center;
-		// }
 	}
 
 	.delete-box {
