@@ -1,29 +1,15 @@
 <template>
 	<div class="miniature-grid">
-		<div class="miniature">
-			<img src="https://i.ytimg.com/vi/AwkeHZhtL7Q/mqdefault.jpg" alt="" />
-			<button class="delete-btn">X</button>
-		</div>
-		<div class="miniature">
-			<img src="https://i.ytimg.com/vi/8YqoQRsmGhA/mqdefault.jpg" alt="" />
-			<button class="delete-btn">X</button>
-		</div>
-		<div class="miniature">
-			<img src="https://i.ytimg.com/vi/lek-vQTFe-c/mqdefault.jpg" alt="" />
-			<button class="delete-btn">X</button>
-		</div>
-		<div class="miniature">
-			<img src="https://i.ytimg.com/vi/SmTOu9G7tbw/mqdefault.jpg" alt="" />
-			<button class="delete-btn">X</button>
-		</div>
-		<div class="miniature">
-			<img src="https://i.ytimg.com/vi/W8WrBOkAwyM/mqdefault.jpg" alt="" />
+		<div class="miniature" v-for="video in videos" :key="video.id" @click="open">
+			<img :src="video.thumbnail" :alt="`Imagen de ${video.title}`" />
 			<button class="delete-btn">X</button>
 		</div>
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+	import { videos } from '../composables/videos';
+</script>
 
 <style lang="scss" scoped>
 	.miniature-grid {
@@ -37,11 +23,15 @@
 		width: 263px;
 		height: 150px;
 		position: relative;
-		border: solid 0.5px #cccccc;
+		// border: solid 0.5px #cccccc;
+
+		&:hover {
+			cursor: pointer;
+		}
 
 		img {
 			width: 263px;
-			height: 150px;
+			height: 150;
 		}
 
 		.delete-btn {

@@ -1,13 +1,13 @@
 <template>
 	<main class="main">
-		<AddVideo />
-		<GridVideo />
+		<VideoAdder />
+		<VideosViewer />
 	</main>
 </template>
 
 <script setup>
-	import AddVideo from '../components/AddVideo.vue';
-	import GridVideo from '../components/GridVideo.vue';
+	import VideoAdder from '../components/VideoAdder.vue';
+	import VideosViewer from '../components/VideosViewer.vue';
 </script>
 
 <style scoped>
